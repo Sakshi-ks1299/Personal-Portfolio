@@ -1,0 +1,99 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  z-index: 1000;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Welcome Section */
+#welcome-section {
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding-top: 100px; /* to offset fixed navbar */
+  text-align: center;
+}
+
+#welcome-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Projects Section */
+#projects {
+  padding: 100px 20px;
+  background-color: #e2e2e2;
+  text-align: center;
+}
+
+.project-tile {
+  margin: 1em 0;
+}
+
+.project-tile a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2em;
+  border: 2px solid #333;
+  padding: 0.5em 1em;
+  display: inline-block;
+  transition: background 0.3s;
+}
+@media (max-width: 600px) {
+ 
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1.5em;
+  }
+
+  /* Adjust welcome section heading for smaller screens */
+  #welcome-section h1 {
+    font-size: 1.8em;
+  }
+
+  #welcome-section p {
+    font-size: 1em;
+    padding: 0 1em;
+  }
+
+  /* Adjust projects section padding and spacing */
+  #projects {
+    padding: 60px 10px;
+  }
+
+  .project-tile {
+    margin: 1.5em 0;
+  }
+
+  /* Make project links adapt to smaller width */
+  .project-tile a {
+    width: 90%;
+    font-size: 1em;
+    padding: 0.75em;
+  }
+}
